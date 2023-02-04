@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "understanding-bayesian-optimization"
+version = "0.1.0"
+description = ""
+authors = ["koji-ono_exwzd <koji.ono@exwzd.com>"]
+readme = "README.md"
+packages = [{include = "understanding_bayesian_optimization"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+botorch = "^0.8.1"
+notebook = "^6.5.2"
+ipywidgets = "^8.0.4"
+plotly = "^5.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
