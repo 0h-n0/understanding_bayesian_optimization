@@ -1,20 +1,33 @@
-[tool.poetry]
-name = "understanding-bayesian-optimization"
+[project]
+name = "udnerstanding-bayesian-optimization"
 version = "0.1.0"
-description = ""
-authors = ["koji-ono_exwzd <koji.ono@exwzd.com>"]
+description = "Add your description here"
+authors = [
+    { name = "0h-n0", email = "kbu94982@gmail.com" }
+]
+dependencies = [
+    "botorch>=0.9.5",
+    "notebook>=7.1.0",
+    "ipywidgets>=8.1.2",
+    "plotly>=5.19.0",
+    "kaleido>=0.2.1",
+]
 readme = "README.md"
-packages = [{include = "understanding_bayesian_optimization"}]
+requires-python = ">= 3.11"
 
-[tool.poetry.dependencies]
-python = "^3.9"
-botorch = "^0.8.1"
-notebook = "^6.5.2"
-ipywidgets = "^8.0.4"
-plotly = "^5.13.0"
-kaleido = "0.2.1"
-
+[project.scripts]
+hello = "udnerstanding_bayesian_optimization:hello"
 
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/udnerstanding_bayesian_optimization"]
